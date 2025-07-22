@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VALORANT - Portal Oficial</title>
+    <link rel="stylesheet" href="styles.css">
+    
+    
+</head>
+<body>
+    <!-- Recomendação de Imagem -->
+    <div class="image-recommendation">
+        <h3>📸 Recomendação de Tamanho de Imagem</h3>
+        <p><strong>Cards dos Agentes:</strong> | <strong>Modal:</strong> | <strong>Formato:</strong> </p>
+    </div>
+
+    <nav class="navbar">
+        <div class="nav-content">
+            <div class="logo">VALORANT</div>
+            <ul class="nav-links">
+                <li><a href="#home">Início</a></li>
+                <li><a href="#agents">Agentes</a></li>
+                <li><a href="#maps">Mapas</a></li>
+                <li><a href="#history">História</a></li>
+                <li><a href="#about">Sobre</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>VALORANT</h1>
+            <p>O FPS tático 5v5 da Riot Games</p>
+            <button class="btn" onclick="scrollToSection('agents')">Explorar Agentes</button>
+        </div>
+    </section>
+
+    <section id="agents" class="section">
+        <h2 class="animate-on-scroll">Agentes</h2>
+        <div class="cards-grid">
+            <div class="card agent-card" onclick="openAgentModal('jett')">
+                <div class="agent-role">DUELISTA</div>
+                <div class="agent-image" data-placeholder= "img" ></div>
+                <h3>Jett</h3>
+                <p>Ágil e letal, Jett da Coreia do Sul pode navegar por qualquer campo de batalha.</p>
+            </div>
+            
+            <div class="card agent-card" onclick="openAgentModal('omen')">
+                <div class="agent-role">CONTROLADOR</div>
+                <div class="agent-image" data-placeholder="img"></div>
+                <h3>Omen</h3>
+                <p>Um fantasma da memória, Omen caça nas sombras.</p>
+            </div>
+            
+            <div class="card agent-card" onclick="openAgentModal('sova')">
+                <div class="agent-role">INICIADOR</div>
+                <div class="agent-image" data-placeholder="img"></div>
+                <h3>Sova</h3>
+                <p>Nascido no eterno inverno da tundra russa.</p>
+            </div>
+            
+            <div class="card agent-card" onclick="openAgentModal('sage')">
+                <div class="agent-role">SENTINELA</div>
+                <div class="agent-image" data-placeholder="img"></div>
+                <h3>Sage</h3>
+                <p>Como uma verdadeira fortaleza, Sage da China traz segurança.</p>
+            </div>
+            
+            <div class="card agent-card" onclick="openAgentModal('phoenix')">
+                <div class="agent-role">DUELISTA</div>
+                <div class="agent-image" data-placeholder="img"></div>
+                <h3>Phoenix</h3>
+                <p>Vindo do Reino Unido, Phoenix traz seu estilo de luta.</p>
+            </div>
+            
+            <div class="card agent-card" onclick="openAgentModal('viper')">
+                <div class="agent-role">CONTROLADOR</div>
+                <div class="agent-image" data-placeholder="img"></div>
+                <h3>Viper</h3>
+                <p>A química é a melhor arma de Viper.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal -->
+    <div class="modal-overlay" id="agentModal">
+        <div class="modal">
+            <button class="modal-close" onclick="closeAgentModal()">×</button>
+            <div class="modal-content">
+                <div class="modal-image" id="modalImage" data-placeholder="img"><img src="" alt=""></div>
+                <div class="modal-info">
+                    <h2 id="modalName">Nome do Agente</h2>
+                    <div class="modal-role" id="modalRole">FUNÇÃO</div>
+                    <p id="modalDescription">Descrição do agente...</p>
+                    
+                    <div class="abilities-section">
+                        <h3>Habilidades</h3>
+                        <div id="modalAbilities">
+                            <!-- Habilidades serão inseridas aqui -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section id="maps" class="section">
+        <h2 class="animate-on-scroll">Mapas</h2>
+        <div class="cards-grid">
+            <div class="card">
+                <div class="map-preview"></div>
+                <h3>Haven</h3>
+                <p>Situado no Butão, Haven é único por ter três sites de ataque. A arquitetura tradicional do mosteiro oferece múltiplas rotas e oportunidades estratégicas.</p>
+            </div>
+            <div class="card">
+                <div class="map-preview"></div>
+                <h3>Bind</h3>
+                <p>Um mapa no Marrocos que se destaca por seus dois teleportadores que conectam diferentes áreas, criando rotações rápidas e jogadas inesperadas.</p>
+            </div>
+            <div class="card">
+                <div class="map-preview"></div>
+                <h3>Split</h3>
+                <p>Localizado em Tóquio, Split é um mapa vertical com múltiplas elevações, cordas e áreas estreitas que favorecem emboscadas e jogadas táticas.</p>
+            </div>
+            <div class="card">
+                <div class="map-preview"></div>
+                <h3>Ascent</h3>
+                <p>Uma ilha flutuante na Itália com design aberto e múltiplas linhas de visão longas, ideal para atiradores de elite e jogadas de precisão.</p>
+            </div>
+            <div class="card">
+                <div class="map-preview"></div>
+                <h3>Icebox</h3>
+                <p>Uma base de pesquisa no Ártico com verticlidade extrema, cordas zip e containers que criam um ambiente tático único e desafiador.</p>
+            </div>
+            <div class="card">
+                <div class="map-preview"></div>
+                <h3>Breeze</h3>
+                <p>Uma ilha tropical nas Bermudas com longas distâncias de engajamento, perfeita para rifles e habilidades de longo alcance.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="history" class="section">
+        <h2 class="animate-on-scroll">História do VALORANT</h2>
+        <div class="history-timeline animate-on-scroll">
+            <div class="timeline-item">
+                <h3>2019 - Desenvolvimento Inicial</h3>
+                <p>A Riot Games começa o desenvolvimento secreto do Project A, com foco em criar um FPS tático competitivo de alta qualidade.</p>
+            </div>
+            <div class="timeline-item">
+                <h3>Março 2020 - Primeira Revelação</h3>
+                <p>O jogo é oficialmente anunciado como VALORANT durante o evento de 10º aniversário da Riot Games, gerando grande expectativa.</p>
+            </div>
+            <div class="timeline-item">
+                <h3>Abril 2020 - Beta Fechado</h3>
+                <p>Lançamento do beta fechado com acesso limitado via drops na Twitch, estabelecendo recordes de visualização na plataforma.</p>
+            </div>
+            <div class="timeline-item">
+                <h3>Junho 2020 - Lançamento Global</h3>
+                <p>VALORANT é oficialmente lançado gratuitamente em todo o mundo, rapidamente ganhando milhões de jogadores.</p>
+            </div>
+            <div class="timeline-item">
+                <h3>2021-2024 - Expansão</h3>
+                <p>Adição contínua de novos agentes, mapas, modos de jogo e desenvolvimento do cenário competitivo profissional global.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="section">
+        <h2 class="animate-on-scroll">Sobre VALORANT</h2>
+        <div class="cards-grid">
+            <div class="card">
+                <div class="card-icon"></div>
+                <h3>Precisão Tática</h3>
+                <p>Um FPS tático 5v5 onde estratégia, mira precisa e trabalho em equipe determinam a vitória. Cada bala conta e cada decisão importa.</p>
+            </div>
+            <div class="card">
+                <div class="card-icon"></div>
+                <h3>Habilidades Únicas</h3>
+                <p>Cada agente possui habilidades especiais que complementam o combate tradicional, criando possibilidades estratégicas infinitas.</p>
+            </div>
+            <div class="card">
+                <div class="card-icon"></div>
+                <h3>Esports Competitivo</h3>
+                <p>Um cenário competitivo robusto com tournaments oficiais, classificações ranqueadas e oportunidades para jogadores profissionais.</p>
+            </div>
+            <div class="card">
+                <div class="card-icon"></div>
+                <h3>Anti-Cheat Vanguard</h3>
+                <p>Sistema anti-cheat de nível kernel que garante partidas justas e competitivas para todos os jogadores.</p>
+            </div>
+            <div class="card">
+                <div class="card-icon"></div>
+                <h3>Atualizações Regulares</h3>
+                <p>Novos conteúdos, agentes, mapas e ajustes de balanceamento são lançados regularmente para manter o jogo fresco e equilibrado.</p>
+            </div>
+            <div class="card">
+                <div class="card-icon"></div>
+                <h3>Skins e Personalização</h3>
+                <p>Ampla variedade de skins de armas, desde designs simples até coleções premium com efeitos visuais e sonoros únicos.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p>&copy; 2025 Riot Games, Inc. VALORANT é uma marca registrada da Riot Games.</p>
+        <p>Site criado com paixão pelos fãs do jogo 🔥</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
