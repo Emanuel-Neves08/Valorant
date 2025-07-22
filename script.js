@@ -67,14 +67,13 @@
             }
         };
 
-        // Smooth scrolling
+ 
         function scrollToSection(sectionId) {
             document.getElementById(sectionId).scrollIntoView({
                 behavior: 'smooth'
             });
         }
 
-        // Navbar links smooth scroll
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
@@ -88,7 +87,6 @@
             });
         });
 
-        // Modal functions
         function openAgentModal(agentId) {
             const agent = agentsData[agentId];
             if (!agent) return;
@@ -97,7 +95,7 @@
             document.getElementById('modalRole').textContent = agent.role;
             document.getElementById('modalDescription').textContent = agent.description;
 
-            // Render abilities
+           
             const abilitiesContainer = document.getElementById('modalAbilities');
             abilitiesContainer.innerHTML = '';
             agent.abilities.forEach(ability => {
@@ -110,7 +108,7 @@
                 abilitiesContainer.appendChild(abilityDiv);
             });
 
-            // Show modal
+            
             document.getElementById('agentModal').classList.add('active');
             document.body.style.overflow = 'hidden';
         }
